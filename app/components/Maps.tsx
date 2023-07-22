@@ -11,14 +11,19 @@ interface Map {
 }
 
 export default function Map() {
-	return <EastLondonMap />;
+	return (
+		<>
+			<EastLondonMap />
+			<WestLondonMap />
+		</>
+	);
 }
 
 function EastLondonMap() {
 	const paidClass = "text-red-500";
 	const attractionList = "hover:text-red-400";
 	return (
-		<main className="flex h-screen flex-col align-middle justify-center items-center gap-4 p-10">
+		<main className="border-2 rounded-sm flex h-screen flex-col align-middle justify-center items-center gap-4 p-10">
 			<h2
 				id="eastlondon"
 				className="text-xl font-extrabold text-red-600"
@@ -212,6 +217,24 @@ function EastLondonMap() {
 						Get this route
 					</Link>
 				</div>
+			</section>
+		</main>
+	);
+}
+
+function WestLondonMap() {
+	return (
+		<main className="border-2 rounded-sm flex flex-col align-middle justify-center items-center gap-4 p-10">
+			<h2>West London route</h2>
+			<p></p>
+			<section>
+				<iframe></iframe>
+				<ul>
+					<h3>Places you will visit:</h3>
+					<li>
+						<Link href="/"></Link>
+					</li>
+				</ul>
 			</section>
 		</main>
 	);
