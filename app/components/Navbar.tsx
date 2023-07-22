@@ -1,5 +1,7 @@
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
+import logo from "public/kings-maps-high-resolution-logo-white-on-transparent-background.png";
 
 type Props = {};
 
@@ -7,11 +9,15 @@ const Navbar = (props: Props) => {
 	const listClass =
 		"text-white font-bold text-lg hover:text-red-300 ease-in-out";
 	return (
-		<nav className="bg-blue-900 h-24 w-full flex justify-around align-middle items-center">
-			<img
-				src="#"
+		<nav
+			className="bg-blue-900 h-28
+		 w-full flex justify-around align-middle items-center"
+		>
+			<Image
+				src={logo}
 				alt="King's map of London logo"
-			></img>
+				width={200}
+			></Image>
 			<ul className="flex justify-between gap-10">
 				<Link
 					href="/"
@@ -44,7 +50,7 @@ const Navbar = (props: Props) => {
 					South London
 				</Link>
 			</ul>
-			<section className="flex gap-4">
+			<section className="flex gap-6 justify-around">
 				<Link
 					href="/#contact"
 					className={listClass}
