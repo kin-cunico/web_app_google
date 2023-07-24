@@ -11,29 +11,66 @@ type Props = {};
 
 const Footer = (props: Props) => {
 	return (
-		<footer className="flex justify-around h-96 py-4 pb-10 bg-blue-900 text-white">
-			<section className="flex flex-col items-center">
+		<footer className="flex justify-around h-fit py-4 pb-10 bg-blue-900 text-white">
+			<section className="flex flex-col items-center gap-2">
 				<h4 className="font-semibold">Socials</h4>
-				<div className="flex gap-4">
+				<div className="flex gap-4 py-10">
 					<Link
-						href="/"
+						href="https://github.com/kin-cunico"
 						target="_blank"
+						className="flex flex-col items-center hover:text-red-400"
 					>
-						<PiGithubLogoDuotone className="text-3xl" />
+						<PiGithubLogoDuotone
+							className="text-3xl"
+							name="github"
+						/>
+						<label
+							htmlFor="github"
+							className="cursor-pointer"
+						>
+							GitHub
+						</label>
+					</Link>
+					<Link
+						href="https://linkedin.com/kincunicoen"
+						target="_blank"
+						className="flex flex-col items-center hover:text-red-400"
+					>
+						<PiLinkedinLogoDuotone
+							className="text-3xl"
+							name="linkedin"
+						/>
+						<label
+							htmlFor="linkedin"
+							className="cursor-pointer"
+						>
+							Linkedin
+						</label>
 					</Link>
 					<Link
 						href="/"
 						target="_blank"
+						className="flex flex-col items-center hover:text-red-400"
 					>
-						<PiLinkedinLogoDuotone className="text-3xl" />
-					</Link>
-					<Link
-						href="/"
-						target="_blank"
-					>
-						<PiTiktokLogoDuotone className="text-3xl" />
+						<PiTiktokLogoDuotone
+							className="text-3xl"
+							name="tiktok"
+						/>
+						<label
+							htmlFor="tiktok"
+							className="cursor-pointer"
+						>
+							TikTok
+						</label>
 					</Link>
 				</div>
+				<Link
+					href="https://kincunico.dev"
+					className="font-semibold  hover:text-red-400"
+				>
+					Developed by Kin Cunico
+				</Link>
+				<p className="text-sm">All rights reserved 2023</p>
 			</section>
 			<section className="flex flex-col items-center">
 				<form className="flex flex-col items-center gap-2">
@@ -62,9 +99,9 @@ const Footer = (props: Props) => {
 					</button>
 				</form>
 			</section>
-			<section className="flex flex-col items-center">
+			<section className="flex flex-col items-center gap-4">
 				<h4
-					className="font-semibold"
+					className="font-semibold "
 					id="donate"
 				>
 					Donate

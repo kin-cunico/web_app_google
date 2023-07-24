@@ -11,7 +11,7 @@ const Navbar = (props: Props) => {
 	return (
 		<nav
 			className="bg-blue-900 h-28
-		 w-full flex justify-around align-middle items-center"
+		 w-full flex justify-around align-middle items-center fixed"
 		>
 			<Image
 				src={logo}
@@ -36,6 +36,12 @@ const Navbar = (props: Props) => {
 					className={listClass}
 				>
 					West London
+				</Link>
+				<Link
+					href="/#southlondon"
+					className={listClass}
+				>
+					Central London
 				</Link>
 				<Link
 					href="/#northlondon"
